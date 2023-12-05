@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./js/css.css">
+</head>
+<body>
+    <div class="slider">
+        <img src="./img/banner.jpg" alt="" id="banner">
+        <button onclick="first()">First</button>
+        <button onclick="previous()">prev</button>
+        <button onclick="next()">next</button>
+        <button onclick="last()">Last</button>
+    </div>
+    <script>
+        var banner = document.getElementById('banner');
+        var imgArr = [
+            '1m.jpg',
+            'tuylip.jpg',
+            'polo.jpg',
+            'aothun.jpg',
+            'doraemon.jpg'
+        ];
+        //Lấy độ dài mảng
+        var lenght = imgArr.length;
+        //set vị trí ảnh 
+        var index = 0;
+
+        function first() {
+            index = 0;
+            //set thuộc tính src
+            banner.src = "img/" + imgArr[index];
+           
+        }
+
+
+        //Hàm next sẽ di chuyển ảnh tiếp theo
+        function next() {
+            index++;
+            if (index >= lenght) {
+                index = 0;
+            }
+            //set thuộc tính src
+            banner.src = "img/" + imgArr[index];
+        }
+
+        //hàm previous để chuyển ảnh trước đó
+        function previous() {
+            index--;
+            if (index < 0) {
+                index = lenght - 1;
+            }
+            //set thuộc tính src
+            banner.src = "img/" + imgArr[index];
+        }
+
+        function last() {
+            index = lenght- 1;
+           
+            //set thuộc tính src
+            banner.src = "img/" + imgArr[index];
+           
+
+        }
+    </script>
+</body>
+</html>

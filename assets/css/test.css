@@ -1,0 +1,125 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.product {
+    display: flex;
+    justify-content: space-between;
+}
+
+.image-container {
+    flex: 1;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.functions {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.slider {
+    margin-top: 20px;
+}
+
+.control-button,
+.order-button {
+    cursor: pointer;
+    padding: 10px;
+    background-color: rgb(250, 83, 48);
+    color: #fff;
+    border: none;
+    margin: 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.control-button:hover,
+.order-button:hover {
+    background-color: rgb(250, 83, 48);
+}
+
+.templates {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.template-option {
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.template-option img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.order-section {
+    margin-top: 20px;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.order-section h2 {
+    color: #333;
+}
+
+.color-options,
+.size-options {
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.order-button {
+    background-color: rgb(250, 83, 48);
+}
+
+.order-button:hover {
+    background-color: rgb(250, 83, 48);
+}
+
+.description {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.description h2 {
+    color: #333;
+}
+
+.description p {
+    color: #666;
+}

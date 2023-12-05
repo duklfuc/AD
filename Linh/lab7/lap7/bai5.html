@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 5</title>
+    <style>
+        input {
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="" onsubmit="return validate()">
+        <h1>ĐẶT HÀNG</h1>
+        <label for="">Sản phẩm</label>
+        <input type="text" id="sanpham">
+        <span id="sanpham_err" style="color:red"></span>
+
+        <br>
+        <label for="" id="loai">Loại</label>
+        <select style="width: 100px; height: 20px; margin-left: 35px;">
+            <option>To</option>
+            <option>Vừa</option>
+            <option>Nhỏ</option>
+        </select>
+        <br>
+        <label for="">Đơn giá</label>
+        <input type="text" name="" id="dongia">
+        <span id="dongia_err" style="color:red"></span>
+
+        <br>
+        <label for="">Nơi nhận hàng</label>
+        <label><input type="radio" name="diachi" id="diachi" onclick="hien_thi(false)">Nội thành</label>
+        <label><input type="radio" name="diachi" id="diachi" onclick="hien_thi(true)">Ngoại thành</label>
+        <br>
+        <label for="" id="phivc">Phí vận chuyển
+            <input type="text" name="" id="" placeholder="100000">
+           
+        </label>
+
+        <br>
+        <hr>
+        <button type="submit">Đặt mua</button>
+    </form>
+    <script src="js/form.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .active{
+            display: block !important;
+        }
+        .myText{
+            display: none;
+        }
+        .title{
+            font-size: 1.5em;
+            background-color: #ddd;
+        }
+
+        button{
+            width: 80px;
+            height: 80px;
+        }
+    </style>
+    <script>
+        var flag = true; //để chọn nhãn(true: x, false:o)
+        let count = 0; // để đếm số lần click nút trên bàn cờ
+        function mark(index) {
+            var button = document.getElementsByTagName("button")[index]; // gọi hết thẻ thì dùng bytagname
+            button.innerText = flag ? "x":"o"; // buttun.innerText là giá trị văn bản của thẻ
+                                                //flag là tạo nhãn
+            button.style.backgroundColor = flag ? "aqua":"yellow"; //thêm màu
+            button.setAttribute('disabled', 'true');
+            flag = !flag;
+            count++;
+            if (count == 8) {
+                alert("Game over");
+                location.reload();
+            }   
+        }
+    </script>
+    <!-- <script>
+        var flag = true;
+        let count = 0;
+        function mark(index){
+            var button = document.getElementsByTagName("button")[ index];
+            button.innerText = flag ? "X" : "O";
+            button.setAttribute('disables', 'true');
+            button.style.backgroundColor = flag ? "aqua" : " yellow";
+            flag = !flag;
+            count++;
+            if (count == 8) {
+                alert(" Kết thúc game");
+                location.reload();
+            }   
+            } 
+    </script> -->
+</head>
+<body>
+    <div class="container">
+        <div class="title">Title #1</div>
+        <div class="myText">Just some text #1</div>
+        <div class="title">Title #2</div>
+        <div class="myText">Just some text #2</div>
+        <div class="title">Title #3</div>
+        <div class="myText">Just some text #3</div>
+    </div>
+    <table align="center" >
+        <tr>
+            <td><button onclick="mark(0)"></button></td>
+            <td><button onclick="mark(1)"></button></td>
+            <td><button onclick="mark(2)"></button></td>
+        </tr>
+        <tr>
+            <td><button onclick="mark(3)"></button></td>
+            <td><button onclick="mark(4)"></button></td>
+            <td><button onclick="mark(5)"></button></td>
+        </tr>
+        <tr>
+            <td><button onclick="mark(6)"></button></td>
+            <td><button onclick="mark(7)"></button></td>
+            <td><button onclick="mark(8)"></button></td>
+        </tr>
+    </table>
+    
+</body>
+</html>

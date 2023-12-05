@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.slider{
+    width: 550px;
+    margin: 20px auto;
+    border: 1px solid #999;
+    text-align: center;
+    padding: 10px;
+}
+
+#banner{
+    width: 100%;
+}
